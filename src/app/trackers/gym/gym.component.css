@@ -1,0 +1,72 @@
+.gym-container {
+  background-color: #e3f2fd;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #90caf9;
+  color: #0d47a1;
+}
+
+.form-wrapper {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group label { font-weight: bold; font-size: 14px; }
+
+select, input {
+  padding: 6px;
+  border: 1px solid #2196f3;
+  border-radius: 5px;
+  width: 60%;
+}
+
+.add-btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-btn:hover { background-color: #1565c0; }
+
+.history-section {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.log-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #bbdefb;
+}
+
+.log-info { font-size: 14px; }
+.log-info strong { color: #1976d2; }
+.log-info span { color: #555; margin-left: 10px; font-style: italic; }
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #f44336;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.empty-msg { font-size: 13px; color: #999; text-align: center; }

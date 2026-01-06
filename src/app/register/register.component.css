@@ -1,0 +1,23 @@
+
+.register-container {
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease; 
+
+/* Plava tema (default) */
+.blue-theme {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+/* Tamna tema */
+.dark-theme {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-theme input {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+} 

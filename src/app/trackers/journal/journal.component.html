@@ -1,0 +1,30 @@
+<div class="journal-container">
+  <h3>🌸 Moj Dnevnik</h3>
+  <p>Zapiši današnje aktivnosti i osjećaje:</p>
+
+  <div class="journal-form">
+    <select [(ngModel)]="odabraniDan">
+      <option *ngFor="let d of dani" [value]="d">{{ d }}</option>
+    </select>
+
+    <textarea 
+      [(ngModel)]="unosTekst" 
+      placeholder="Šta se desilo danas? Kako se osjećaš?">
+    </textarea>
+
+    <button (click)="dodajZapis()">Sačuvaj u dnevnik</button>
+  </div>
+
+  <div class="journal-history">
+    <h4>Prošli zapisi:</h4>
+    <div *ngFor="let z of dnevnik; let i = index" class="journal-card">
+      <div class="card-header">
+        <strong>{{ z.dan }}</strong>
+        <small>{{ z.vrijeme | date:'dd.MM.yyyy HH:mm' }}</small>
+      </div>
+      <p>{{ z.tekst }}</p>
+      <button class="btn-delete" (click)="obrisiZapis(i)">Izbriši</button>
+    </div>
+    <p *ngIf="dnevnik.length === 0" class="empty-info">Još uvijek nemaš zapisa. Počni pisati!</p>
+  </div>
+</div>

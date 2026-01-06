@@ -1,0 +1,22 @@
+.dashboard-wrapper {
+  padding: 20px;
+  background-color: #f4f7f6;
+  min-height: 100vh;
+}
+
+.trackers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+app-water, app-sleep, app-journal, app-gym, app-mood, app-food {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: block;
+}

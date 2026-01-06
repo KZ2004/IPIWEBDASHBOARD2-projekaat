@@ -1,0 +1,34 @@
+<div class="sleep-container">
+  <h3>🌙 Sleep Tracker</h3>
+  <p>Prati koliko si spavao sinoć:</p>
+
+  <div class="sleep-form">
+    <div class="input-row">
+      <label>Dan:</label>
+      <select [(ngModel)]="odabraniDan">
+        <option *ngFor="let d of dani" [value]="d">{{ d }}</option>
+      </select>
+    </div>
+
+    <div class="input-row">
+      <label>Sati spavanja:</label>
+      <input type="number" [(ngModel)]="uneseniSati" min="1" max="24">
+    </div>
+
+    <button (click)="dodajZapis()">Spremi zapis</button>
+  </div>
+
+  <div class="sleep-history">
+    <h4>Povijest spavanja:</h4>
+    <div class="history-list">
+      <div *ngFor="let s of logSpavanja; let i = index" class="sleep-card">
+        <div class="card-info">
+          <strong>{{ s.dan }}</strong>
+          <span>{{ s.sati }} h</span>
+        </div>
+        <button class="delete-btn" (click)="obrisiZapis(i)">✕</button>
+      </div>
+      <p *ngIf="logSpavanja.length === 0" class="empty-msg">Nema zabilježenih podataka.</p>
+    </div>
+  </div>
+</div>

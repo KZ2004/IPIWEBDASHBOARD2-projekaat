@@ -1,0 +1,46 @@
+/* Definicije tema */
+.blue-theme { --primary-color: #3498db; --bg-color: #ebf5fb; }
+.pink-theme { --primary-color: #e91e63; --bg-color: #fce4ec; }
+.red-theme  { --primary-color: #e74c3c; --bg-color: #fdedec; }
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  transition: all 0.3s ease;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-top: 5px solid var(--primary-color);
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.theme-switcher button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}

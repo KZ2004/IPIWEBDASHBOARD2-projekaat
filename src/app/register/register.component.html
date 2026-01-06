@@ -1,0 +1,18 @@
+<div [class]="currentTheme" class="register-container">
+  
+  <h2>Registracija</h2>
+  
+  <div class="theme-buttons">
+    <button (click)="promjeniTemu('blue-theme')">Plava Tema</button>
+    <button (click)="promjeniTemu('dark-theme')">Tamna Tema</button>
+  </div>
+
+  <form (submit)="registrujSe()">
+    <input type="text" [(ngModel)]="user.ime" name="ime" placeholder="Ime">
+    <input type="email" [(ngModel)]="user.email" name="email" placeholder="Email">
+    <input type="password" [(ngModel)]="user.pass" name="pass" placeholder="Lozinka">
+    <button type="submit">Registruj se</button>
+  </form>
+
+</div>
+

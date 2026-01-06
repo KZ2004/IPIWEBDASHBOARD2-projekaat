@@ -1,0 +1,49 @@
+<div class="gym-container">
+  <h3>🏋️ Planer Treninga</h3>
+
+  <div class="form-wrapper">
+    <div class="input-group">
+      <label>Dan:</label>
+      <select [(ngModel)]="odabraniDan">
+        <option *ngFor="let d of dani" [value]="d">{{d}}</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Kategorija:</label>
+      <select [(ngModel)]="odabranaKategorija" (change)="promijeniKategoriju()">
+        <option value="Noge">Noge</option>
+        <option value="Ruke">Ruke</option>
+        <option value="Core">Core</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Vježba:</label>
+      <select [(ngModel)]="odabranaVjezba">
+        <option *ngFor="let v of trenutneVjezbe" [value]="v">{{v}}</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Serije:</label>
+      <input type="number" [(ngModel)]="brojSerija" min="1">
+    </div>
+
+    <button class="add-btn" (click)="dodajTrening()">Zabilježi Trening</button>
+  </div>
+
+  <div class="history-section">
+    <h4>Popis odrađenih vježbi:</h4>
+    <div class="log-list">
+      <div *ngFor="let t of listaTreninga; let i = index" class="log-item">
+        <div class="log-info">
+          <strong>{{t.dan}}</strong> - {{t.vjezba}} ({{t.kategorija}})
+          <span>{{t.serije}} serije</span>
+        </div>
+        <button class="delete-btn" (click)="obrisiTrening(i)">✕</button>
+      </div>
+      <p *ngIf="listaTreninga.length === 0" class="empty-msg">Nema zabilježenih treninga.</p>
+    </div>
+  </div>
+</div>

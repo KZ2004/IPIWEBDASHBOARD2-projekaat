@@ -1,0 +1,76 @@
+.mood-container {
+  background-color: #f0f7ff;
+  padding: 20px;
+  border-radius: 15px;
+  color: #0d47a1;
+  border: 1px solid #bbdefb;
+}
+
+.mood-selector {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.mood-selector button {
+  background: white;
+  border: 2px solid #2196f3;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.mood-selector button:hover {
+  background-color: #e3f2fd;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+}
+
+.emoji { font-size: 1.8rem; }
+.label { font-size: 0.8rem; color: #1565c0; font-weight: bold; }
+
+.mood-history {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.mood-history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mood-history li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e3f2fd;
+}
+
+.history-emoji { font-size: 1.4rem; }
+
+.history-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-details strong { font-size: 0.9rem; }
+.history-details small { color: #757575; font-size: 0.75rem; }
+
+.empty-msg {
+  color: #9e9e9e;
+  font-style: italic;
+  justify-content: center;
+  border: none !important;
+}

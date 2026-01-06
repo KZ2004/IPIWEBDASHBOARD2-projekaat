@@ -1,0 +1,29 @@
+<div class="mood-container">
+  <h3>Dnevnik raspoloženja</h3>
+  <p>Kako se osjećaš danas?</p>
+  
+  <div class="mood-selector">
+    <button *ngFor="let m of dostupniMoods" 
+            (click)="dodajMood(m.emoji, m.label)" 
+            [title]="m.label">
+      <span class="emoji">{{ m.emoji }}</span>
+      <span class="label">{{ m.label }}</span>
+    </button>
+  </div>
+
+  <div class="mood-history">
+    <h4>Povijest osjećaja:</h4>
+    <ul>
+      <li *ngFor="let unos of dnevnikRaspolozenja">
+        <span class="history-emoji">{{ unos.emoji }}</span>
+        <div class="history-details">
+          <strong>{{ unos.label }}</strong>
+          <small>{{ unos.vrijeme | date:'HH:mm' }} - {{ unos.vrijeme | date:'dd.MM.' }}</small>
+        </div>
+      </li>
+      <li *ngIf="dnevnikRaspolozenja.length === 0" class="empty-msg">
+        Još nema unosa za danas.
+      </li>
+    </ul>
+  </div>
+</div>

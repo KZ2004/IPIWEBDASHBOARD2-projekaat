@@ -1,0 +1,21 @@
+<div class="food-container">
+  <h3>Add today's meal:</h3>
+  
+  <div class="input-section">
+    <select [(ngModel)]="odabraniDan">
+      <option *ngFor="let d of sedmica" [value]="d.dan">{{ d.dan }}</option>
+    </select>
+    <input type="text" [(ngModel)]="novoJelo" placeholder="Šta ste jeli?">
+    <button (click)="dodajJelo()">Dodaj</button>
+  </div>
+
+  <div class="weekly-overview">
+    <div *ngFor="let d of sedmica" class="day-card" [class.active]="d.dan === getDanasnjiDan()">
+      <h4>{{ d.dan }}</h4>
+      <ul>
+        <li *ngFor="let jelo of d.jela">{{ jelo }}</li>
+        <li *ngIf="d.jela.length === 0" class="empty">Nema unosa</li>
+      </ul>
+    </div>
+  </div>
+</div>

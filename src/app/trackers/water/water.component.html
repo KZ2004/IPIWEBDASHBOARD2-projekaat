@@ -1,0 +1,22 @@
+<div class="water-card">
+  <h3>💧 Water Tracker</h3>
+  
+  <div class="stat-info">
+    <span class="current">{{ popijenoLitara }}L</span>
+    <span class="goal">Cilj: {{ ciljLitara }}L</span>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" [style.width.%]="procenat"></div>
+  </div>
+
+  <div class="controls">
+    <button (click)="dodajVodu(1)">+ 1 Litar</button>
+    <button (click)="dodajVodu(2)">+ 2 Litra</button>
+    <button (click)="resetujVodu()" class="reset-btn">Reset</button>
+  </div>
+
+  <p class="status-msg" *ngIf="popijenoLitara >= ciljLitara">
+    🎉 Bravo! Ostvarili ste dnevni cilj!
+  </p>
+</div>

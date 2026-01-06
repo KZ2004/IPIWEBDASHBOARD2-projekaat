@@ -1,0 +1,16 @@
+/* Globalne teme */
+.dark-theme {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+.blue-theme {
+    background-color: #e3f2fd !important;
+    color: #0d47a1 !important;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}

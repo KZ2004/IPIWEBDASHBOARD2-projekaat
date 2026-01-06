@@ -1,0 +1,24 @@
+<div [className]="currentTheme" class="login-container">
+  <div class="login-box">
+    <h2>Dobrodošli</h2>
+    
+    <div class="form-group">
+      <input type="email" [(ngModel)]="userData.email" placeholder="Email" name="email">
+    </div>
+    
+    <div class="form-group">
+      <input type="password" [(ngModel)]="userData.password" placeholder="Lozinka" name="password">
+    </div>
+
+    <div class="button-group">
+      <button (click)="onSubmit()" class="btn-primary">Prijavi se</button>
+      
+      <button (click)="onRegister()" class="btn-secondary">Napravi nalog</button>
+    </div>
+
+    <div class="theme-selector">
+      <button (click)="setTheme('blue-theme')">Plava</button>
+      <button (click)="setTheme('dark-theme')">Tamna</button>
+    </div>
+  </div>
+</div>
