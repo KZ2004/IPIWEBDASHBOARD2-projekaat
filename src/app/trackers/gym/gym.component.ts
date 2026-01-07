@@ -19,7 +19,7 @@ interface TreningUnos {
 export class GymComponent {
   dani = ['Ponedjeljak', 'Utorak', 'Srijeda', 'Četvrtak', 'Petak', 'Subota', 'Nedjelja'];
   
-  // Definišemo tip ključeva kako bi TypeScript bio sretan
+
   vjezbePoKategorijama: { [key: string]: string[] } = {
     'Noge': ['Čučanj', 'Leg Press', 'Iskorak', 'Mrtvo dizanje'],
     'Ruke': ['Biceps pregib', 'Triceps ekstenzija', 'Potisak za ramena', 'Hammer pregib'],
